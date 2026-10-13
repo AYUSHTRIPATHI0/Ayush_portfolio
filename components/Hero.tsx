@@ -14,7 +14,8 @@ import {
   MessageSquare,
   Award,
   Terminal,
-  Cpu
+  Cpu,
+  Layers
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -29,10 +30,10 @@ export default function Hero() {
   };
 
   const stats = [
-    { value: '4+', label: 'Ventures & Products', hint: 'sitekraft, devQBX, AyuSutra, Luniva' },
-    { value: '15+', label: 'Production Ships', hint: 'Web, AI Systems & APIs' },
+    { value: '10+', label: 'Shipped Production Builds', hint: 'sitekraft, ELNN, DroneClean, devQBX' },
+    { value: '4+', label: 'Ventures & Platforms', hint: 'sitekraft.dev, devQBX, AyuSutra, Luniva' },
     { value: '2026', label: 'India AI Convergence', hint: 'CU TBI Exhibitor & Speaker' },
-    { value: '100%', label: 'Hands-On Builder', hint: 'From Architecture to Scale' },
+    { value: '14-21d', label: 'MVP Sprint Velocity', hint: 'Concept to Scalable Production' },
   ];
 
   return (
@@ -63,7 +64,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               <span className="text-xs font-medium text-emerald-300 tracking-wide font-mono">
-                Open for High-Impact AI & Venture Collaborations
+                Available for Q3/Q4 Founder Sprints & AI Architecture
               </span>
             </motion.div>
 
@@ -75,35 +76,35 @@ export default function Hero() {
             {/* Sub-headline / Role */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-lg sm:text-2xl font-semibold text-gray-200 mb-6">
               <span className="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-sm sm:text-base font-mono">
-                Startup Founder
+                Founder @ sitekraft.dev
               </span>
               <span className="text-gray-500">•</span>
               <span className="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-sm sm:text-base font-mono">
-                AI Systems Engineer
+                Chief Architect
               </span>
               <span className="text-gray-500">•</span>
               <span className="px-2.5 py-1 rounded-md bg-purple-500/15 border border-purple-500/30 text-purple-300 text-sm sm:text-base font-mono">
-                Full-Stack Builder
+                Full-Stack & AI Systems
               </span>
             </div>
 
             {/* Bio pitch */}
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
-              Founder building digital products through <span className="text-indigo-300 font-semibold underline decoration-indigo-500/40 underline-offset-4">sitekraft.dev</span> and developer ecosystems at <span className="text-cyan-300 font-semibold underline decoration-cyan-500/40 underline-offset-4">devQBX.in</span>. Exhibited AI innovations (<span className="text-purple-300 font-medium">AyuSutra</span> & <span className="text-pink-300 font-medium">Luniva AI</span>) at <span className="text-white font-medium">India AI Convergence 2026</span>.
+              Software founder engineering production-ready SaaS platforms, AI copilots, and high-performance digital systems at <span className="text-indigo-300 font-semibold underline decoration-indigo-500/40 underline-offset-4">sitekraft.dev</span> and builder ecosystems at <span className="text-cyan-300 font-semibold underline decoration-cyan-500/40 underline-offset-4">devQBX.in</span>. Turning ambitious ideas into market-ready software with surgical precision.
             </p>
 
             {/* Call to Actions */}
             <div className="flex flex-wrap items-center gap-3.5 mb-10 w-full sm:w-auto">
               <a
-                href="#ventures"
+                href="#projects"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-indigo-500 via-purple-600 to-cyan-500 text-white shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/45 hover:scale-[1.02] active:scale-[0.98] transition group"
               >
-                <span>Explore Ventures & Work</span>
+                <span>Explore Builds & Demos</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
 
               <a
-                href="https://wa.me/918009651086?text=Hi%20Ayush,%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect!"
+                href="https://wa.me/918009651086?text=Hi%20Ayush,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project%20sprint!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-medium border border-white/10 hover:border-emerald-500/40 bg-white/5 hover:bg-emerald-950/30 text-gray-200 hover:text-emerald-300 transition"
@@ -157,7 +158,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: High-Impact Founder Visual Card (5 cols) */}
+          {/* Right Column: Founder Visual Card (from sitekraft.dev) (5 cols) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -166,42 +167,42 @@ export default function Hero() {
           >
             {/* Card Frame with Glow Border */}
             <div className="relative rounded-3xl p-2 bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-cyan-500/30 shadow-2xl shadow-indigo-950/60">
-              <div className="relative rounded-[22px] overflow-hidden bg-dark-900 aspect-[4/5] sm:aspect-[3/4]">
+              <div className="relative rounded-[22px] overflow-hidden bg-dark-900 aspect-square">
                 
-                {/* Clean, Sharp Founder Portrait */}
+                {/* Official sitekraft.dev studio portrait of Ayush */}
                 <Image
-                  src="/enhanced/hero-founder.jpg"
-                  alt="Ayush Tripathi - Startup Founder & AI Engineer speaking at conference"
+                  src="/enhanced/sitekraft-founder.png"
+                  alt="Ayush Tripathi - Founder & Chief Architect at sitekraft.dev"
                   fill
-                  className="object-cover object-top filter contrast-[1.05]"
+                  className="object-cover object-top"
                   priority
                 />
 
                 {/* Subtle vignette gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
 
-                {/* Floating Top Badge: Keynote & Stage */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                {/* Floating Top Badge */}
+                <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
                   <div className="px-3 py-1.5 rounded-full border border-white/15 bg-dark-950/80 backdrop-blur-md flex items-center gap-1.5 shadow-lg">
                     <Sparkles size={13} className="text-cyan-400" />
-                    <span className="text-xs font-medium text-white">Founder & Speaker</span>
+                    <span className="text-xs font-medium text-white">Founder & Chief Architect</span>
                   </div>
                   <div className="px-2.5 py-1 rounded-full border border-indigo-500/30 bg-indigo-950/70 backdrop-blur-md flex items-center gap-1">
-                    <Award size={12} className="text-indigo-400" />
-                    <span className="text-[11px] font-mono text-indigo-300">CU AI Fest &apos;26</span>
+                    <Cpu size={12} className="text-indigo-400" />
+                    <span className="text-[11px] font-mono text-indigo-300">sitekraft.dev</span>
                   </div>
                 </div>
 
                 {/* Floating Bottom Info Pill */}
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl border border-white/10 bg-dark-950/85 backdrop-blur-xl shadow-2xl">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl border border-white/10 bg-dark-950/85 backdrop-blur-xl shadow-2xl pointer-events-none">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs font-mono uppercase tracking-wider text-cyan-400">Core Focus</p>
-                      <p className="text-sm font-semibold text-white">AI Products & Scalable Web</p>
+                      <p className="text-xs font-mono uppercase tracking-wider text-cyan-400">Direct Comms</p>
+                      <p className="text-sm font-semibold text-white">Founder-to-Founder Sprints</p>
                     </div>
                     <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-500/20">
-                      <Cpu size={13} />
-                      <span>sitekraft.dev</span>
+                      <Layers size={13} />
+                      <span>14-21 Day MVPs</span>
                     </div>
                   </div>
                 </div>
@@ -219,8 +220,8 @@ export default function Hero() {
                 <Terminal size={20} />
               </div>
               <div>
-                <p className="text-xs text-gray-400 font-mono">Ecosystem</p>
-                <p className="text-sm font-bold text-white">devQBX.in</p>
+                <p className="text-xs text-gray-400 font-mono">Studio Hub</p>
+                <p className="text-sm font-bold text-white">Kanpur HQ • Bangalore</p>
               </div>
             </motion.div>
 
@@ -231,7 +232,7 @@ export default function Hero() {
               className="absolute -top-5 -right-3 sm:-right-5 hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl border border-white/10 bg-dark-900/90 backdrop-blur-xl shadow-xl shadow-black/50"
             >
               <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
-              <span className="text-xs font-medium text-gray-200">Chandigarh University TBI</span>
+              <span className="text-xs font-medium text-gray-200">SaaS & AI Studio</span>
             </motion.div>
 
           </motion.div>
