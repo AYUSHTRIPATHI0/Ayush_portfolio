@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /private
 
+# Host & Sitemap definition
+Host: https://tripathiayush.in
 Sitemap: https://tripathiayush.in/sitemap.xml

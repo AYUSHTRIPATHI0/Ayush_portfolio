@@ -30,24 +30,24 @@ export default function Hero() {
   };
 
   const stats = [
-    { value: '10+', label: 'Shipped Production Builds', hint: 'sitekraft, ELNN, DroneClean, devQBX' },
-    { value: '4+', label: 'Ventures & Platforms', hint: 'sitekraft.dev, devQBX, AyuSutra, Luniva' },
+    { value: '10+', label: 'Shipped Builds', hint: 'sitekraft, ELNN, devQBX' },
+    { value: '4+', label: 'Ventures & Labs', hint: 'sitekraft.dev, devQBX, AyuSutra' },
     { value: '2026', label: 'India AI Convergence', hint: 'CU TBI Exhibitor & Speaker' },
-    { value: '14-21d', label: 'MVP Sprint Velocity', hint: 'Concept to Scalable Production' },
+    { value: '14-21d', label: 'Sprint Velocity', hint: 'Concept to Production' },
   ];
 
   return (
-    <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-28 sm:pt-36 pb-16 sm:pb-24 flex flex-col justify-center overflow-x-hidden">
       {/* Background ambient glowing orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-indigo-600/20 via-purple-600/15 to-cyan-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-tr from-indigo-600/20 via-purple-600/15 to-cyan-500/10 blur-[90px] sm:blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-10 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-cyan-500/10 blur-[90px] sm:blur-[120px] rounded-full pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Left Column: Branding, Story & CTAs (7 cols) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col items-start"
@@ -57,47 +57,47 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 backdrop-blur-md mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 backdrop-blur-md mb-5 max-w-full"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span className="text-xs font-medium text-emerald-300 tracking-wide font-mono">
-                Available for Q3/Q4 Founder Sprints & AI Architecture
+              <span className="text-[11px] sm:text-xs font-medium text-emerald-300 tracking-wide font-mono truncate">
+                Available for Founder Sprints & AI Architecture
               </span>
             </motion.div>
 
             {/* Main Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-5 leading-[1.08]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 sm:mb-5 leading-[1.1]">
               Hi, I&apos;m <span className="gradient-text">Ayush Tripathi</span>
             </h1>
 
             {/* Sub-headline / Role */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-lg sm:text-2xl font-semibold text-gray-200 mb-6">
-              <span className="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-sm sm:text-base font-mono">
+            <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm md:text-base font-semibold text-gray-200 mb-5">
+              <span className="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 font-mono">
                 Founder @ sitekraft.dev
               </span>
-              <span className="text-gray-500">•</span>
-              <span className="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-sm sm:text-base font-mono">
+              <span className="text-gray-500 hidden sm:inline">•</span>
+              <span className="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-mono">
                 Chief Architect
               </span>
-              <span className="text-gray-500">•</span>
-              <span className="px-2.5 py-1 rounded-md bg-purple-500/15 border border-purple-500/30 text-purple-300 text-sm sm:text-base font-mono">
+              <span className="text-gray-500 hidden sm:inline">•</span>
+              <span className="px-2.5 py-1 rounded-md bg-purple-500/15 border border-purple-500/30 text-purple-300 font-mono">
                 Full-Stack & AI Systems
               </span>
             </div>
 
             {/* Bio pitch */}
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-7 max-w-2xl">
               Software founder engineering production-ready SaaS platforms, AI copilots, and high-performance digital systems at <span className="text-indigo-300 font-semibold underline decoration-indigo-500/40 underline-offset-4">sitekraft.dev</span> and builder ecosystems at <span className="text-cyan-300 font-semibold underline decoration-cyan-500/40 underline-offset-4">devQBX.in</span>. Turning ambitious ideas into market-ready software with surgical precision.
             </p>
 
             {/* Call to Actions */}
-            <div className="flex flex-wrap items-center gap-3.5 mb-10 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-8 w-full sm:w-auto">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-indigo-500 via-purple-600 to-cyan-500 text-white shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/45 hover:scale-[1.02] active:scale-[0.98] transition group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-indigo-500 via-purple-600 to-cyan-500 text-white shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/45 hover:scale-[1.02] active:scale-[0.98] transition group text-center"
               >
                 <span>Explore Builds & Demos</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -107,7 +107,7 @@ export default function Hero() {
                 href="https://wa.me/918009651086?text=Hi%20Ayush,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project%20sprint!"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-medium border border-white/10 hover:border-emerald-500/40 bg-white/5 hover:bg-emerald-950/30 text-gray-200 hover:text-emerald-300 transition"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-medium border border-white/10 hover:border-emerald-500/40 bg-white/5 hover:bg-emerald-950/30 text-gray-200 hover:text-emerald-300 transition text-center"
               >
                 <MessageSquare size={16} className="text-emerald-400" />
                 <span>WhatsApp Chat</span>
@@ -116,25 +116,25 @@ export default function Hero() {
               {/* One-click email copy */}
               <button
                 onClick={copyEmail}
-                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-sm font-mono border border-white/10 bg-white/5 hover:bg-white/10 text-gray-300 transition"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-xs sm:text-sm font-mono border border-white/10 bg-white/5 hover:bg-white/10 text-gray-300 transition text-center"
                 title="Copy email to clipboard"
               >
                 {copied ? (
                   <>
                     <Check size={16} className="text-emerald-400" />
-                    <span className="text-emerald-400 text-xs">Email Copied!</span>
+                    <span className="text-emerald-400 text-xs font-semibold">Email Copied!</span>
                   </>
                 ) : (
                   <>
-                    <Copy size={15} />
-                    <span className="text-xs">tripathiayush944@gmail.com</span>
+                    <Copy size={14} />
+                    <span className="text-xs truncate">tripathiayush944@gmail.com</span>
                   </>
                 )}
               </button>
             </div>
 
             {/* Social badges bar */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5 sm:gap-3">
               <span className="text-xs uppercase font-mono tracking-wider text-gray-400 mr-1">
                 Network:
               </span>
@@ -152,18 +152,18 @@ export default function Hero() {
                   aria-label={label}
                   className={`p-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-gray-300 transition ${color}`}
                 >
-                  <Icon size={18} />
+                  <Icon size={17} />
                 </a>
               ))}
             </div>
           </motion.div>
 
-          {/* Right Column: Founder Visual Card (from sitekraft.dev) (5 cols) */}
+          {/* Right Column: Founder Visual Card (5 cols) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 20 }}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative w-full max-w-sm sm:max-w-md mx-auto"
           >
             {/* Card Frame with Glow Border */}
             <div className="relative rounded-3xl p-2 bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-cyan-500/30 shadow-2xl shadow-indigo-950/60">
@@ -182,26 +182,26 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
 
                 {/* Floating Top Badge */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                  <div className="px-3 py-1.5 rounded-full border border-white/15 bg-dark-950/80 backdrop-blur-md flex items-center gap-1.5 shadow-lg">
-                    <Sparkles size={13} className="text-cyan-400" />
-                    <span className="text-xs font-medium text-white">Founder & Chief Architect</span>
+                <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+                  <div className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/15 bg-dark-950/80 backdrop-blur-md flex items-center gap-1.5 shadow-lg">
+                    <Sparkles size={12} className="text-cyan-400" />
+                    <span className="text-[11px] sm:text-xs font-medium text-white">Founder & Chief Architect</span>
                   </div>
-                  <div className="px-2.5 py-1 rounded-full border border-indigo-500/30 bg-indigo-950/70 backdrop-blur-md flex items-center gap-1">
-                    <Cpu size={12} className="text-indigo-400" />
-                    <span className="text-[11px] font-mono text-indigo-300">sitekraft.dev</span>
+                  <div className="px-2 py-1 rounded-full border border-indigo-500/30 bg-indigo-950/70 backdrop-blur-md flex items-center gap-1">
+                    <Cpu size={11} className="text-indigo-400" />
+                    <span className="text-[10px] sm:text-[11px] font-mono text-indigo-300">sitekraft.dev</span>
                   </div>
                 </div>
 
                 {/* Floating Bottom Info Pill */}
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl border border-white/10 bg-dark-950/85 backdrop-blur-xl shadow-2xl pointer-events-none">
+                <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3 rounded-2xl border border-white/10 bg-dark-950/85 backdrop-blur-xl shadow-2xl pointer-events-none">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs font-mono uppercase tracking-wider text-cyan-400">Direct Comms</p>
-                      <p className="text-sm font-semibold text-white">Founder-to-Founder Sprints</p>
+                      <p className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-cyan-400">Direct Comms</p>
+                      <p className="text-xs sm:text-sm font-semibold text-white">Founder-to-Founder Sprints</p>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-500/20">
-                      <Layers size={13} />
+                    <div className="flex items-center gap-1 text-[10px] sm:text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg border border-emerald-500/20">
+                      <Layers size={12} />
                       <span>14-21 Day MVPs</span>
                     </div>
                   </div>
@@ -210,7 +210,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Badge Left */}
+            {/* Floating Badge Left (Hidden on mobile to prevent overflow) */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -225,7 +225,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Floating Badge Right */}
+            {/* Floating Badge Right (Hidden on mobile to prevent overflow) */}
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -241,20 +241,20 @@ export default function Hero() {
 
         {/* Stats Strip */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 pt-10 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+          className="mt-14 sm:mt-20 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8"
         >
           {stats.map((s, idx) => (
             <div key={idx} className="flex flex-col">
-              <span className="text-3xl sm:text-4xl font-extrabold gradient-text tracking-tight font-mono">
+              <span className="text-2xl sm:text-4xl font-extrabold gradient-text tracking-tight font-mono">
                 {s.value}
               </span>
-              <span className="text-sm sm:text-base font-semibold text-white mt-1">
+              <span className="text-xs sm:text-base font-semibold text-white mt-1">
                 {s.label}
               </span>
-              <span className="text-xs text-gray-400 mt-0.5">
+              <span className="text-[11px] sm:text-xs text-gray-400 mt-0.5">
                 {s.hint}
               </span>
             </div>
