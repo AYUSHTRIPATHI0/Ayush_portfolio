@@ -1,70 +1,107 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Youtube, Instagram } from 'lucide-react';
+import { Github, Linkedin, Youtube, Instagram, ArrowUp, Heart, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const socials = [
-    { icon: Github, href: 'https://github.com/AYUSHTRIPATHI0', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/ayushtripathi00/', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/AYUSHTRIPATHI0', label: 'GitHub' },
     { icon: Youtube, href: 'https://youtube.com/@realayush00', label: 'YouTube' },
     { icon: Instagram, href: 'https://instagram.com/ayush_tripthi', label: 'Instagram' },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="border-t border-white/10 py-12 relative">
+    <footer className="border-t border-white/10 bg-dark-950/80 backdrop-blur-md pt-16 pb-12 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold gradient-text mb-4">Ayush Tripathi</h3>
-            <p className="text-gray-400">Building startups, AI products, and digital systems for the future.</p>
-          </motion.div>
+        
+        <div className="grid md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          
+          {/* Brand Col (5 cols) */}
+          <div className="md:col-span-5 space-y-4">
+            <Link href="/" className="inline-flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-cyan-400 p-[1px]">
+                <div className="w-full h-full bg-dark-900 rounded-[7px] flex items-center justify-center font-bold text-xs text-white">
+                  AT
+                </div>
+              </div>
+              <span className="text-xl font-bold text-white tracking-tight">
+                Ayush Tripathi
+              </span>
+            </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/" className="hover:text-indigo-400 transition">Home</a></li>
-              <li><a href="#startups" className="hover:text-indigo-400 transition">Startups</a></li>
-              <li><a href="#projects" className="hover:text-indigo-400 transition">Projects</a></li>
-              <li><a href="/blog" className="hover:text-indigo-400 transition">Blog</a></li>
-            </ul>
-          </motion.div>
+            <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
+              Startup Founder & AI Systems Engineer. Building <span className="text-indigo-400 font-medium">sitekraft.dev</span> and cultivating developer ecosystems through <span className="text-cyan-400 font-medium">devQBX.in</span>.
+            </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h4 className="font-semibold mb-4">Follow</h4>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-3 py-1.5 rounded-full w-fit">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Shipped from India to the World</span>
+            </div>
+          </div>
+
+          {/* Quick Navigation (4 cols) */}
+          <div className="md:col-span-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-gray-300 font-semibold mb-4">
+              Explore Portfolio
+            </h4>
+            <div className="grid grid-cols-2 gap-2 text-sm text-gray-400">
+              <a href="#ventures" className="hover:text-cyan-400 transition">Ventures</a>
+              <a href="#milestones" className="hover:text-cyan-400 transition">Milestones & Talks</a>
+              <a href="#projects" className="hover:text-cyan-400 transition">Featured Projects</a>
+              <a href="#skills" className="hover:text-cyan-400 transition">Tech Stack</a>
+              <a href="#gallery" className="hover:text-cyan-400 transition">Journey Gallery</a>
+              <a href="#contact" className="hover:text-cyan-400 transition">Get In Touch</a>
+            </div>
+          </div>
+
+          {/* Socials & Connect (3 cols) */}
+          <div className="md:col-span-3 space-y-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-gray-300 font-semibold">
+              Connect With Ayush
+            </h4>
+
+            <div className="flex gap-2">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 glass rounded-lg hover:bg-white/10 transition"
+                  aria-label={label}
+                  className="p-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-cyan-500/40 text-gray-300 hover:text-white transition"
                 >
-                  <Icon size={20} />
+                  <Icon size={18} />
                 </a>
               ))}
             </div>
-          </motion.div>
+
+            <button
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-white transition pt-2"
+            >
+              <span>Back to Top</span>
+              <ArrowUp size={14} />
+            </button>
+          </div>
+
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center text-gray-400">
-          <p>© 2024 Ayush Tripathi. All rights reserved.</p>
+        {/* Bottom bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <div>
+            © {new Date().getFullYear()} Ayush Tripathi. All rights reserved.
+          </div>
+          <div className="flex items-center gap-1.5 text-gray-400">
+            <span>Crafted with Next.js 14, TailwindCSS & Passion</span>
+          </div>
         </div>
+
       </div>
     </footer>
   );

@@ -12,18 +12,25 @@ export default function FloatingParticles() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    let animId: number;
 
-    const particles: Array<{ x: number; y: number; vx: number; vy: number; size: number }> = [];
+    const setSize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    setSize();
 
-    for (let i = 0; i < 50; i++) {
+    const particles: Array<{ x: number; y: number; vx: number; vy: number; size: number; alpha: number }> = [];
+
+    const count = Math.min(45, Math.floor(window.innerWidth / 30));
+    for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        size: Math.random() * 1.8 + 0.8,
+        alpha: Math.random() * 0.3 + 0.15,
       });
     }
 
@@ -40,23 +47,25 @@ export default function FloatingParticles() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(99, 102, 241, 0.3)';
+        ctx.fillStyle = `rgba(99, 102, 241, ${p.alpha})`;
         ctx.fill();
       });
 
-      requestAnimationFrame(animate);
+      animId = requestAnimationFrame(animate);
     }
 
     animate();
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      setSize();
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animId);
+    };
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />;
+  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0 opacity-70" />;
 }
