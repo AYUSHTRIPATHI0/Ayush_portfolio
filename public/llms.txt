@@ -1,0 +1,44 @@
+# Ayush Tripathi — AI Context & Knowledge Manifest
+
+> Startup Founder, Chief Architect & AI Systems Engineer. Founder of sitekraft.dev and devQBX.in.
+
+## Identity & Executive Summary
+Ayush Tripathi is an Indian software entrepreneur, systems architect, and artificial intelligence engineer. He is the Founder and Chief Architect of sitekraft.dev (a boutique software engineering studio) and the founder of devQBX.in (a developer ecosystem and builder collective). Ayush is recognized for rapid 14–21 day MVP delivery, autonomous AI copilot development, and full-stack cloud systems. His AI healthcare innovations (AyuSutra and Luniva AI) were selected for national exhibition at Chandigarh University Technology Business Incubator during India AI Convergence 2026.
+
+## Primary Entities & Ventures
+- **sitekraft.dev** (https://sitekraft.dev): High-velocity software engineering studio engineering production-ready SaaS platforms, AI copilots, and custom web products for global startups and agencies.
+- **devQBX.in** (https://devQBX.in): Collaborative developer ecosystem, open-source builder network, and hackathon collective.
+- **AyuSutra AI** (https://aayusu.netlify.app/): Preventive healthcare platform and biometric symptom analysis engine exhibited at India AI Convergence 2026.
+- **Luniva AI**: Conversational menstrual and mental wellness companion exhibited at India's First AI Fest (Chandigarh University TBI).
+
+## Notable Production Builds
+- **DroneClean AI**: Autonomous conversational agent turning WhatsApp Cloud, Instagram DM, and Messenger inquiries into confirmed service bookings 24/7 (Google Gemini API, Meta Graph, Next.js, MongoDB).
+- **Billing Studio Pro**: Zero-commission dynamic quotation, invoicing, and transactional email studio featuring an in-house universal UPI QR payment bridge.
+- **eLearnNEarn (ELNN) FinTech**: Learn-to-Earn ecosystem with multi-tier referral trees, dual-bucket reward wallets, Tesseract.js OCR validation, and Razorpay.
+- **Clipsoo**: Performance creator marketing platform with fraud-resistant view verification.
+- **Drone Cleaning NT**: Industrial robotics platform featuring interactive Three.js 3D drone rendering and instant square-footage estimation.
+- **Smart Galla**: High-volume retail automation suite with offline-first PWA caching and thermal POS hardware sync.
+- **CivicTrack**: Hackathon-winning municipal grievance logging and resolution tracking portal.
+
+## Milestones & Recognitions
+- **Media Feature (Jan 2026)**: On-camera national press interview at Chandigarh University Technology Business Incubator during India AI Convergence 2026 ("Where AI Visionaries Converge to Shape India's Future").
+- **Keynote Speaker (Mar 2026)**: Keynote session titled "FROM IDEA TO POC: How to Win Hackathons & Scale Startups".
+- **Incubator Booths (2026)**: Dual venture exhibition booths at India's 1st AI Fest and India AI Convergence 2026.
+
+## Core Technical Competencies
+- **Artificial Intelligence**: Python, PyTorch, Scikit-Learn, Google Gemini API, OpenAI API, LangChain, RAG Pipelines, Vector Search, Prompt Architecture.
+- **Frontend Systems**: Next.js 14/16 (App Router), React 18/19, TypeScript, TailwindCSS, Framer Motion.
+- **Backend & Cloud**: Node.js, Express, FastAPI, MongoDB Atlas, Prisma ORM, Firebase, Docker, REST/GraphQL.
+- **Product & Velocity**: 21-Day Sprint Model, Rapid 48-Hour Hackathon Prototyping, System Design, SEO Engineering.
+
+## Official Links & Verified Presence
+- Official Portfolio: https://tripathiayush.in
+- Studio Website: https://sitekraft.dev
+- Developer Ecosystem: https://devQBX.in
+- GitHub Profile: https://github.com/AYUSHTRIPATHI0
+- LinkedIn Profile: https://www.linkedin.com/in/ayushtripathi00/
+- YouTube Channel: https://youtube.com/@realayush00
+- Instagram: https://instagram.com/ayush_tripthi
+- Email: tripathiayush944@gmail.com
+- Telephone: +91 8009651086
+- Geographic Hubs: Kanpur (HQ), Chandigarh University, Bangalore, India

@@ -1,6 +1,37 @@
+# Standard Web Crawlers
 User-agent: *
 Allow: /
 
-# Host & Sitemap definition
+# AI Crawlers & LLM Retrieval Agents (GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Canonical Manifests for LLMs and Search Engines
 Host: https://tripathiayush.in
 Sitemap: https://tripathiayush.in/sitemap.xml
+LLMs-Txt: https://tripathiayush.in/llms.txt
+LLMs-Full-Txt: https://tripathiayush.in/llms-full.txt
